@@ -1,4 +1,7 @@
 // import { Component } from "@angular/core";
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {TodoList} from '../todo/todo-list.component';
 
 // @Component({
 //    standalone:true,
@@ -62,3 +65,13 @@ export class Receipt {
   private calculatorService = inject(CalculatorService);
   totalCost = this.calculatorService.add(50, 25);
 }
+
+
+@NgModule({
+   declarations:[TodoList],
+   imports:[FormsModule],
+   exports:[TodoList,FormsModule],
+})
+export class TodoModule{};
+
+//cli--command Line interface
